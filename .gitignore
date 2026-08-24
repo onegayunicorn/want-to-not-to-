@@ -1,0 +1,7 @@
+node_modules/
+coverage-output.txt
+.DS_Store
+.env
+
+# Local runtime artifacts
+*.log

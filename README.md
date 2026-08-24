@@ -47,22 +47,22 @@ The server-side model should contain an opaque note ID, content, created timesta
 
 ## Public testing deployment
 
-This repository is a plain static site: `index.html`, `styles.css`, `app.js`, and `app-core.mjs` are served directly, and there is no frontend build step or runtime server. For a temporary public URL, connect the GitHub repository to either Vercel or Netlify. Both platforms can create a production URL and preview deployments for later branch or pull-request changes. Vercel documents automatic deployments for connected GitHub projects and preview URLs for pushes and pull requests [1]. Netlify documents Git-connected continuous deployment and confirms that manual static deploys do not run a build command [2].
+This repository is a plain static site: `index.html`, `styles.css`, `app.js`, and `app-core.mjs` are served directly, with `server.js` providing the optional Express API and static server. For a temporary public URL, connect the GitHub repository `onegayunicorn/want-to-not-to-` to either Vercel or Netlify. Both platforms can create a production URL and preview deployments for later branch or pull-request changes. Vercel documents automatic deployments for connected GitHub projects and preview URLs for pushes and pull requests [1]. Netlify documents Git-connected continuous deployment and confirms that manual static deploys do not run a build command [2].
 
 | Platform | Recommended settings for this repository | Result |
 |---|---|---|
-| Vercel | Import `onegayunicorn/AI_Memory_Project`; Framework preset **Other**; root directory `/`; leave the build command empty; output directory `.` or the repository root | Production deployment plus preview URLs for branch and pull-request changes |
-| Netlify | Add a new site from Git; choose `onegayunicorn/AI_Memory_Project`; base directory empty; build command empty; publish directory `.` | Production deployment plus Deploy Previews for pull requests |
+| Vercel | Import `onegayunicorn/want-to-not-to-`; Framework preset **Other**; root directory `/`; leave the build command empty; output directory `.` or the repository root | Production deployment plus preview URLs for branch and pull-request changes |
+| Netlify | Add a new site from Git; choose `onegayunicorn/want-to-not-to-`; base directory empty; build command empty; publish directory `.` | Production deployment plus Deploy Previews for pull requests |
 
 ### Vercel dashboard path
 
-Open [Vercel](https://vercel.com/new), sign in with GitHub, choose **Import Third-Party Git Repository** or the GitHub repository selector, select `AI_Memory_Project`, and deploy. Because the repository is already a static root site, do not add a framework build command. After the first deployment, pushes to the configured production branch update the production URL and pull requests receive preview URLs.
+Open [Vercel](https://vercel.com/new), sign in with GitHub, choose **Import Third-Party Git Repository** or the GitHub repository selector, select `want-to-not-to-`, and deploy. Because the repository is already a static root site, do not add a framework build command. After the first deployment, pushes to the configured production branch update the production URL and pull requests receive preview URLs.
 
 For a CLI-based deployment, install the Vercel CLI locally, authenticate, and run `vercel` from the repository root. Use `vercel --prod` only when you explicitly want to update the production URL; ordinary `vercel` deployments are safer for review previews.
 
 ### Netlify dashboard path
 
-Open [Netlify](https://app.netlify.com/), choose **Add new site → Import an existing project**, authorize GitHub, select `AI_Memory_Project`, leave the base directory and build command blank, set the publish directory to `.`, and choose **Deploy site**. Netlify will keep the site synchronized with Git pushes. Its **Deploy Previews** can be used to review pull requests before merging.
+Open [Netlify](https://app.netlify.com/), choose **Add new site → Import an existing project**, authorize GitHub, select `want-to-not-to-`, leave the base directory and build command blank, set the publish directory to `.`, and choose **Deploy site**. Netlify will keep the site synchronized with Git pushes. Its **Deploy Previews** can be used to review pull requests before merging.
 
 For a one-off public test without Git integration, use [Netlify Drop](https://app.netlify.com/drop) and upload a zip of the repository root. This is convenient for a disposable demo, but the Git-connected path is preferable because it keeps the public preview reproducible from the committed source.
 
@@ -94,6 +94,20 @@ Run every check and simulation with:
 ```bash
 npm run verify
 ```
+
+Generate the Node coverage summary with:
+
+```bash
+npm run coverage
+```
+
+Start the integrated Express server with:
+
+```bash
+npm run dev
+```
+
+The dedicated safe biometric simulator is available at `/biometric.html`; it never accesses real sensors or stores biometric templates.
 
 The current signer is explicitly marked `Ed25519-development-only`. It is a test adapter, not a production ML-DSA implementation. For a real deployment, replace it with a reviewed ML-DSA-65 library or use WebAuthn/passkeys for private administrative authentication, protect private keys with platform secure storage, and complete a security, privacy, moderation, and retention review. See `docs/note-schema.md` and `docs/production-boundary.md`.
 

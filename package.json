@@ -8,10 +8,12 @@
     "dev": "node server.js",
     "build": "npm run check",
     "start": "node server.js",
-    "check": "node --check app.js && node --check protocol/note.mjs && node --check client/installation-signer.mjs && node --check gateway/ingestion.mjs && node --check gateway/server.mjs && node --check provenance/merkle.mjs && node --check simulation/run-all.mjs && node --check simulator/biometric-auth.mjs && node --check simulator/run-biometric.mjs",
+    "check": "node --check app.js && node --check protocol/note.mjs && node --check client/installation-signer.mjs && node --check gateway/ingestion.mjs && node --check gateway/server.mjs && node --check provenance/merkle.mjs && node --check simulation/run-all.mjs && node --check simulator/biometric-auth.mjs && node --check simulator/run-biometric.mjs && node --check simulator/multimodal-reference.mjs && node --check simulator-page.js",
     "test": "node --test",
+    "coverage": "node --test --experimental-test-coverage",
     "simulate": "node simulation/run-all.mjs && node simulator/run-biometric.mjs",
-    "verify": "npm run check && npm test && npm run simulate"
+    "verify": "npm run check && npm test && npm run simulate",
+    "verif": "npm run verify"
   },
   "engines": {
     "node": ">=18"
