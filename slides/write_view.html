@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Learning Commons — The Write View</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;800&display=swap');
+      
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      
+      .slide-container {
+        width: 1280px;
+        min-height: 720px;
+        background: #F0F9FF;
+        font-family: 'Inter', sans-serif;
+        position: relative;
+        overflow: hidden;
+        color: #334155;
+      }
+
+      .node {
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        background: #C2410C;
+        border-radius: 50%;
+      }
+
+      .line {
+        position: absolute;
+        background: rgba(194, 65, 12, 0.2);
+        width: 1px;
+      }
+
+      .header-block {
+        padding-top: 60px;
+        padding-left: 80px;
+      }
+
+      h2 {
+        font-size: 72px;
+        font-weight: 800;
+        color: #0F172A;
+        letter-spacing: -0.04em;
+      }
+
+      .main-layout {
+        display: flex;
+        padding-top: 40px;
+        padding-left: 80px;
+        gap: 60px;
+      }
+
+      .text-col {
+        flex: 1;
+        max-width: 500px;
+      }
+
+      .image-col {
+        flex: 1;
+      }
+
+      .image-col img {
+        width: 600px;
+        height: 400px;
+        object-fit: contain;
+        background: #fff;
+        border: 1px solid #E2E8F0;
+      }
+
+      .feature {
+        margin-bottom: 30px;
+        position: relative;
+      }
+
+      .feature-title {
+        font-size: 28px;
+        font-weight: 800;
+        color: #0F172A;
+        margin-bottom: 8px;
+      }
+
+      .feature-body {
+        font-size: 18px;
+        line-height: 1.6;
+      }
+
+      .separator {
+        position: absolute;
+        left: 620px;
+        top: 200px;
+        height: 400px;
+      }
+      
+      .node-anchor { top: 200px; left: 615px; }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="header-block">
+            <h2>The Write view</h2>
+        </div>
+
+        <div class="main-layout">
+            <div class="text-col">
+                <div class="feature">
+                    <div class="feature-title">Write / listen / share</div>
+                    <div class="feature-body">The composer keeps original words intact while supporting a concise 360-character learning trace.</div>
+                </div>
+                <div class="feature">
+                    <div class="feature-title">Prompt chips</div>
+                    <div class="feature-body">Structural scaffolds (I learned, A method, An experiment, An idea) help writers capture transferable insights.</div>
+                </div>
+                <div class="feature">
+                    <div class="feature-title">Private guide</div>
+                    <div class="feature-body">A conversational assistant helps clarify the observation without rewriting or judging the author.</div>
+                </div>
+            </div>
+
+            <div class="image-col">
+                <img src="/home/ubuntu/upload/1000066878.jpg" alt="Composer Mockup">
+            </div>
+        </div>
+
+        <div class="node node-anchor"></div>
+        <div class="line separator"></div>
+    </div>
+</body>
+</html>

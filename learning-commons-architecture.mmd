@@ -1,0 +1,50 @@
+flowchart LR
+  classDef core fill:#365848,color:#fff,stroke:#26302a,stroke-width:2px
+  classDef view fill:#fffdf8,color:#26302a,stroke:#8da697,stroke-width:1.5px
+  classDef guide fill:#f3efe3,color:#4f4631,stroke:#b6a77e,stroke-width:1.5px
+  classDef growth fill:#e4ece2,color:#365848,stroke:#86a18d,stroke-width:1.5px
+  classDef guard fill:#f6f6ef,color:#536158,stroke:#c5cec5,stroke-dasharray:5 4
+
+  LC[Learning Commons<br/>content without identity]:::core
+  WRITE[Write<br/>quiet capture]:::view
+  COMMONS[Commons<br/>shared traces]:::view
+  GUIDE[Conversational guide<br/>private guidance]:::guide
+  SHELF[Quiet shelf<br/>scan patterns]:::view
+  MAP[Idea map<br/>semantic proximity]:::view
+  CARD[Loose notes<br/>focused reading]:::view
+  TRACE[Content-only trace<br/>observation · method · experiment<br/>decision · idea]:::guard
+  MOD[Future moderation<br/>rate limits · public safety]:::guard
+
+  LC --> WRITE
+  LC --> COMMONS
+  WRITE --> GUIDE
+  GUIDE -->|notice → act → change → try next| TRACE
+  TRACE --> COMMONS
+  COMMONS --> SHELF
+  COMMONS --> MAP
+  COMMONS --> CARD
+  MAP -->|semantic relationships only| TRACE
+  TRACE --> MOD
+
+  subgraph GROWTH[Suggested pathways of growth and strength]
+    G1[Strength 1<br/>Preserve original words]:::growth
+    G2[Strength 2<br/>Make next-reader value visible]:::growth
+    G3[Growth 1<br/>Conversational prompts]:::growth
+    G4[Growth 2<br/>Semantic clustering]:::growth
+    G5[Growth 3<br/>Moderation + metrics]:::growth
+    G6[Growth 4<br/>Optional collaborative studies]:::growth
+    G1 --> G2 --> G3 --> G4 --> G5 --> G6
+  end
+
+  TRACE -. supports .-> G1
+  GUIDE -. strengthens .-> G3
+  MAP -. enables .-> G4
+  MOD -. protects .-> G5
+
+  subgraph PRINCIPLES[Non-negotiable principles]
+    P1[People remain anonymous]:::guard
+    P2[Ideas are visible]:::guard
+    P3[No social graph]:::guard
+    P4[Guide is not therapist, judge, editor, or author]:::guard
+  end
+  PRINCIPLES -. governs .-> LC

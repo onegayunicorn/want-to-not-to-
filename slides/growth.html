@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Learning Commons — Architecture and Growth</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;800&display=swap');
+      
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      
+      .slide-container {
+        width: 1280px;
+        min-height: 720px;
+        background: #F0F9FF;
+        font-family: 'Inter', sans-serif;
+        position: relative;
+        overflow: hidden;
+        color: #334155;
+      }
+
+      .node {
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        background: #C2410C;
+        border-radius: 50%;
+      }
+
+      .line {
+        position: absolute;
+        background: rgba(194, 65, 12, 0.2);
+        height: 1px;
+      }
+
+      .header-block {
+        padding-top: 60px;
+        padding-left: 80px;
+      }
+
+      h2 {
+        font-size: 72px;
+        font-weight: 800;
+        color: #0F172A;
+        letter-spacing: -0.04em;
+        margin-bottom: 10px;
+      }
+
+      .intro-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding-top: 20px;
+        padding-left: 80px;
+        padding-right: 80px;
+        gap: 40px;
+      }
+
+      .point-title {
+        font-size: 28px;
+        font-weight: 800;
+        color: #0F172A;
+        margin-bottom: 8px;
+      }
+
+      .point-body {
+        font-size: 18px;
+        line-height: 1.5;
+      }
+
+      .map-container {
+        position: absolute;
+        bottom: 60px;
+        left: 80px;
+        width: 1120px;
+        height: 300px;
+        background: #fff;
+        border: 1px solid #E2E8F0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .map-container img {
+        width: 1100px;
+        height: 280px;
+        object-fit: contain;
+      }
+
+      .node-l { top: 180px; left: 70px; }
+      .line-v { top: 185px; left: 75px; height: 100px; width: 1px; }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="header-block">
+            <h2>Architecture and growth</h2>
+        </div>
+
+        <div class="intro-grid">
+            <div>
+                <div class="point-title">Strength first, then scale</div>
+                <div class="point-body">Core flow: Learning Commons → Write / Commons → private guide and content-only trace → Shelf, Map, Card.</div>
+            </div>
+            <div>
+                <div class="point-title">Growth pathways</div>
+                <div class="point-body">Conversational prompts → semantic clustering → moderation and safety metrics → optional collaborative studies.</div>
+            </div>
+        </div>
+
+        <div class="node node-l"></div>
+        <div class="line line-v"></div>
+
+        <div class="map-container">
+            <img src="/home/ubuntu/AI_Memory_Project/learning-commons-architecture.png" alt="Architecture and Growth Map">
+        </div>
+    </div>
+</body>
+</html>

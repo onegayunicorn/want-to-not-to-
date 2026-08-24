@@ -1,0 +1,8 @@
+{
+  "name": "Learning Commons",
+  "description": "Anonymous-by-design Learning Commons prototype where ideas are shared without profiles or identities.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

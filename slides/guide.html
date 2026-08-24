@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Learning Commons — Conversational Guide</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;800&display=swap');
+      
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      
+      .slide-container {
+        width: 1280px;
+        min-height: 720px;
+        background: #F0F9FF;
+        font-family: 'Inter', sans-serif;
+        position: relative;
+        overflow: hidden;
+        color: #334155;
+      }
+
+      .header-block {
+        padding-top: 60px;
+        padding-left: 80px;
+      }
+
+      h2 {
+        font-size: 72px;
+        font-weight: 800;
+        color: #0F172A;
+        letter-spacing: -0.04em;
+      }
+
+      .subtitle {
+        font-size: 32px;
+        font-weight: 400;
+        color: #C2410C;
+        margin-top: 10px;
+      }
+
+      .pathway-container {
+        position: absolute;
+        top: 360px;
+        left: 80px;
+        width: 1120px;
+        height: 2px;
+        background: rgba(194, 65, 12, 0.2);
+      }
+
+      .node {
+        position: absolute;
+        top: -5px;
+        width: 12px;
+        height: 12px;
+        background: #C2410C;
+        border-radius: 50%;
+      }
+
+      .step {
+        position: absolute;
+        width: 240px;
+        text-align: center;
+      }
+
+      .step-label {
+        font-size: 24px;
+        font-weight: 800;
+        color: #0F172A;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        margin-bottom: 10px;
+      }
+
+      .step-desc {
+        font-size: 16px;
+        line-height: 1.4;
+      }
+
+      .quote-block {
+        position: absolute;
+        bottom: 80px;
+        left: 80px;
+        right: 80px;
+        background: #fff;
+        border-left: 6px solid #C2410C;
+        padding: 30px;
+      }
+
+      .quote-text {
+        font-size: 28px;
+        font-style: italic;
+        color: #0F172A;
+        line-height: 1.4;
+      }
+
+      /* Positioning steps */
+      .step-1 { left: 0; top: -100px; }
+      .step-2 { left: 293px; top: 40px; }
+      .step-3 { left: 586px; top: -100px; }
+      .step-4 { left: 880px; top: 40px; }
+
+      .node-1 { left: 114px; }
+      .node-2 { left: 407px; }
+      .node-3 { left: 700px; }
+      .node-4 { left: 994px; }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="header-block">
+            <h2>Conversational guide</h2>
+            <div class="subtitle">From internal reaction to observable event</div>
+        </div>
+
+        <div class="pathway-container">
+            <div class="node node-1"></div>
+            <div class="node node-2"></div>
+            <div class="node node-3"></div>
+            <div class="node node-4"></div>
+
+            <div class="step step-1">
+                <div class="step-label">Notice</div>
+                <div class="step-desc">What did you observe in the situation?</div>
+            </div>
+            <div class="step step-2">
+                <div class="step-label">Act</div>
+                <div class="step-desc">What was the specific method or experiment?</div>
+            </div>
+            <div class="step step-3">
+                <div class="step-label">Change</div>
+                <div class="step-desc">What shifted in your understanding?</div>
+            </div>
+            <div class="step step-4">
+                <div class="step-label">Try Next</div>
+                <div class="step-desc">What is the transferable idea for others?</div>
+            </div>
+        </div>
+
+        <div class="quote-block">
+            <div class="quote-text">“Can we look at what happened rather than the feeling it produced?”</div>
+        </div>
+    </div>
+</body>
+</html>

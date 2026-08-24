@@ -1,0 +1,106 @@
+{
+  "project_info": {
+    "title": "Learning Commons",
+    "created": 1787593334.284,
+    "last_updated": 1787593415.461,
+    "total_slides": 9
+  },
+  "slides": [
+    {
+      "id": "cover",
+      "state": "edited",
+      "pageNum": 1
+    },
+    {
+      "id": "promise",
+      "state": "edited",
+      "pageNum": 2
+    },
+    {
+      "id": "write_view",
+      "state": "edited",
+      "pageNum": 3
+    },
+    {
+      "id": "guide",
+      "state": "edited",
+      "pageNum": 4
+    },
+    {
+      "id": "arrangements",
+      "state": "edited",
+      "pageNum": 5
+    },
+    {
+      "id": "map",
+      "state": "edited",
+      "pageNum": 6
+    },
+    {
+      "id": "growth",
+      "state": "edited",
+      "pageNum": 7
+    },
+    {
+      "id": "deployment",
+      "state": "edited",
+      "pageNum": 8
+    },
+    {
+      "id": "ready",
+      "state": "edited",
+      "pageNum": 9
+    }
+  ],
+  "outline": [
+    {
+      "id": "cover",
+      "title": "Learning Commons",
+      "summary": "Cover slide for the Learning Commons product vision presentation."
+    },
+    {
+      "id": "promise",
+      "title": "The product promise",
+      "summary": "Overview of the core principles: anonymity and visible ideas.",
+      "image_plan": "/home/ubuntu/upload/1000066890.jpg - Image 1 shows the app interface illustrating the Write view and product promise"
+    },
+    {
+      "id": "write_view",
+      "title": "The Write view",
+      "summary": "Description of the composer and prompt chips for capturing learning.",
+      "image_plan": "/home/ubuntu/upload/1000066878.jpg - Image 3 shows mobile mockup views of the app composer and reading interface"
+    },
+    {
+      "id": "guide",
+      "title": "Conversational guide",
+      "summary": "Explanation of the private guide's redirection toward observable action."
+    },
+    {
+      "id": "arrangements",
+      "title": "Reading arrangements",
+      "summary": "Introduction to Quiet shelf, Study table, and Loose notes."
+    },
+    {
+      "id": "map",
+      "title": "Idea Map",
+      "summary": "Description of the spatial idea map and conceptual similarity."
+    },
+    {
+      "id": "growth",
+      "title": "Architecture and growth",
+      "summary": "Overview of the system architecture and future growth pathways.",
+      "image_plan": "/home/ubuntu/AI_Memory_Project/learning-commons-architecture.png - Image 4 shows the complete architecture and growth map described in the slide"
+    },
+    {
+      "id": "deployment",
+      "title": "Deployment for public testing",
+      "summary": "Step-by-step instructions for Vercel and Netlify deployment.",
+      "image_plan": "/home/ubuntu/upload/1000066885.jpg - Image 2 shows the GitHub deployment and repository view mentioned in deployment slide"
+    },
+    {
+      "id": "ready",
+      "title": "Definition of ready",
+      "summary": "Summary of the current build status and production requirements."
+    }
+  ]
+}

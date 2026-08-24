@@ -1,0 +1,22 @@
+{
+  "name": "learning-commons",
+  "version": "1.1.0",
+  "private": true,
+  "description": "Anonymous-by-design Learning Commons prototype with a signed-note gateway simulation.",
+  "type": "module",
+  "scripts": {
+    "dev": "node server.js",
+    "build": "npm run check",
+    "start": "node server.js",
+    "check": "node --check app.js && node --check protocol/note.mjs && node --check client/installation-signer.mjs && node --check gateway/ingestion.mjs && node --check gateway/server.mjs && node --check provenance/merkle.mjs && node --check simulation/run-all.mjs && node --check simulator/biometric-auth.mjs && node --check simulator/run-biometric.mjs",
+    "test": "node --test",
+    "simulate": "node simulation/run-all.mjs && node simulator/run-biometric.mjs",
+    "verify": "npm run check && npm test && npm run simulate"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}

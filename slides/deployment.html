@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Learning Commons — Deployment</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;800&display=swap');
+      
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      
+      .slide-container {
+        width: 1280px;
+        min-height: 720px;
+        background: #F0F9FF;
+        font-family: 'Inter', sans-serif;
+        position: relative;
+        overflow: hidden;
+        color: #334155;
+      }
+
+      .node {
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        background: #C2410C;
+        border-radius: 50%;
+        z-index: 3;
+      }
+
+      .line {
+        position: absolute;
+        background: rgba(194, 65, 12, 0.2);
+        height: 1px;
+        z-index: 1;
+        transform-origin: top left;
+      }
+
+      .tl-cluster {
+        position: absolute;
+        top: 60px;
+        left: 80px;
+        width: 500px;
+      }
+
+      .br-cluster {
+        position: absolute;
+        bottom: 60px;
+        right: 80px;
+        width: 550px;
+        text-align: right;
+      }
+
+      h2 {
+        font-size: 64px;
+        font-weight: 800;
+        color: #0F172A;
+        letter-spacing: -0.04em;
+        margin-bottom: 30px;
+        line-height: 1.1;
+      }
+
+      .deploy-box {
+        margin-bottom: 30px;
+      }
+
+      .platform-name {
+        font-size: 28px;
+        font-weight: 800;
+        color: #C2410C;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+      }
+
+      .steps {
+        font-size: 18px;
+        line-height: 1.6;
+        list-style: none;
+      }
+
+      .steps li {
+        margin-bottom: 8px;
+      }
+
+      .image-wrap {
+        margin-top: 20px;
+        display: inline-block;
+        background: #fff;
+        border: 1px solid #E2E8F0;
+        padding: 5px;
+      }
+
+      .image-wrap img {
+        width: 450px;
+        height: 280px;
+        object-fit: cover;
+      }
+
+      .node-tl { top: 55px; left: 75px; }
+      .node-br { bottom: 55px; right: 75px; }
+      .line-diag {
+        top: 60px;
+        left: 80px;
+        width: 1400px;
+        transform: rotate(28deg);
+      }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="node node-tl"></div>
+        <div class="line line-diag"></div>
+        <div class="node node-br"></div>
+
+        <div class="tl-cluster">
+            <h2>Deployment for public testing</h2>
+            <div class="deploy-box">
+                <div class="platform-name">Vercel</div>
+                <ul class="steps">
+                    <li>• Import GitHub repository</li>
+                    <li>• Keep project root at repository root</li>
+                    <li>• Leave build command empty (Static)</li>
+                    <li>• Automatic preview on every push</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="br-cluster">
+            <div class="deploy-box">
+                <div class="platform-name">Netlify</div>
+                <ul class="steps">
+                    <li>Connect Git repository •</li>
+                    <li>Set publish directory to root •</li>
+                    <li>Zero-build configuration •</li>
+                    <li>Manual 'Drop' for quick local tests •</li>
+                </ul>
+            </div>
+            <div class="image-wrap">
+                <img src="/home/ubuntu/upload/1000066885.jpg" alt="GitHub Deployment View">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

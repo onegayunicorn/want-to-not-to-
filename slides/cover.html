@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Learning Commons — Cover</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;800&display=swap');
+      
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      
+      .slide-container {
+        width: 1280px;
+        min-height: 720px;
+        background: #F0F9FF;
+        font-family: 'Inter', sans-serif;
+        position: relative;
+        overflow: hidden;
+        color: #334155;
+      }
+
+      .node {
+        position: absolute;
+        width: 12px;
+        height: 12px;
+        background: #C2410C;
+        border-radius: 50%;
+        z-index: 2;
+      }
+
+      .line {
+        position: absolute;
+        background: rgba(194, 65, 12, 0.3);
+        height: 1px;
+        z-index: 1;
+        transform-origin: top left;
+      }
+
+      .content-tl {
+        position: absolute;
+        top: 100px;
+        left: 100px;
+        max-width: 600px;
+      }
+
+      .content-br {
+        position: absolute;
+        bottom: 100px;
+        right: 100px;
+        text-align: right;
+        max-width: 500px;
+      }
+
+      h1 {
+        font-size: 120px;
+        font-weight: 800;
+        color: #0F172A;
+        line-height: 0.9;
+        letter-spacing: -0.05em;
+        margin-bottom: 20px;
+      }
+
+      .subtitle {
+        font-size: 40px;
+        font-weight: 400;
+        color: #C2410C;
+        line-height: 1.2;
+      }
+
+      .node-tl { top: 90px; left: 90px; }
+      .node-br { bottom: 90px; right: 90px; }
+      
+      .line-diag {
+        top: 96px;
+        left: 96px;
+        width: 1400px;
+        transform: rotate(26deg);
+      }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="node node-tl"></div>
+        <div class="line line-diag"></div>
+        <div class="node node-br"></div>
+
+        <div class="content-tl">
+            <h1>Learning<br>Commons</h1>
+        </div>
+
+        <div class="content-br">
+            <div class="subtitle">A place to leave something useful for the next person.</div>
+        </div>
+    </div>
+</body>
+</html>

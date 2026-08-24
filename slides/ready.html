@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Learning Commons — Definition of Ready</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;800&display=swap');
+      
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      
+      .slide-container {
+        width: 1280px;
+        min-height: 720px;
+        background: #F0F9FF;
+        font-family: 'Inter', sans-serif;
+        position: relative;
+        overflow: hidden;
+        color: #334155;
+      }
+
+      .node {
+        position: absolute;
+        width: 12px;
+        height: 12px;
+        background: #C2410C;
+        border-radius: 50%;
+        z-index: 3;
+      }
+
+      .line {
+        position: absolute;
+        background: rgba(194, 65, 12, 0.3);
+        height: 1px;
+        z-index: 1;
+        transform-origin: top left;
+      }
+
+      .tl-cluster {
+        position: absolute;
+        top: 100px;
+        left: 100px;
+        max-width: 600px;
+      }
+
+      .br-cluster {
+        position: absolute;
+        bottom: 100px;
+        right: 100px;
+        text-align: right;
+        max-width: 600px;
+      }
+
+      h2 {
+        font-size: 90px;
+        font-weight: 800;
+        color: #0F172A;
+        line-height: 0.9;
+        letter-spacing: -0.05em;
+        margin-bottom: 20px;
+      }
+
+      .status-list {
+        list-style: none;
+        font-size: 28px;
+        line-height: 1.6;
+        color: #334155;
+      }
+
+      .status-list li {
+        margin-bottom: 15px;
+      }
+
+      .status-list strong {
+        color: #C2410C;
+        font-weight: 800;
+      }
+
+      .node-tl { top: 90px; left: 90px; }
+      .node-br { bottom: 90px; right: 90px; }
+      
+      .line-diag {
+        top: 96px;
+        left: 96px;
+        width: 1400px;
+        transform: rotate(26deg);
+      }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="node node-tl"></div>
+        <div class="line line-diag"></div>
+        <div class="node node-br"></div>
+
+        <div class="tl-cluster">
+            <h2>Definition<br>of ready</h2>
+        </div>
+
+        <div class="br-cluster">
+            <ul class="status-list">
+                <li><strong>Conversational guide</strong> redirects feeling to action</li>
+                <li><strong>360-character limit</strong> enforced at all boundaries</li>
+                <li><strong>Shelf, Map, and Card</strong> views verified and responsive</li>
+                <li><strong>Content-only</strong> data model preserves anonymity</li>
+                <li><strong>Zero-build</strong> deployment paths documented</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
