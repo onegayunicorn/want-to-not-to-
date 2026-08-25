@@ -1,0 +1,6 @@
+name = "learning-commons-stageb-simulation"
+compatibility_date = "2026-08-25"
+main = "src/worker.mjs"
+
+# Deliberately no D1, KV, R2, Queue, Cron, secrets, or route bindings.
+# This file documents the future Worker shape but is not a production deployment configuration.
