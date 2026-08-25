@@ -42,3 +42,12 @@ test("view and arrangement controls have intact labels", () => {
   assert.match(app, /data-view=\"single\" class=\"\$\{view === \"single\" \? \"active\" : \"\"\}\">Loose notes/);
   assert.match(app, /data-mode=\"map\" class=\"\$\{commonsMode === \"map\" \? \"active\" : \"\"\}\">Map \/ ideas/);
 });
+
+test("public V1 shell has no identity or sensor workflow", () => {
+  assert.doesNotMatch(html, /sign[ -]?in|log[ -]?in|password|create account/i);
+  assert.doesNotMatch(html, /camera|fingerprint|face recognition|wallet/i);
+  assert.match(html, /biometric\.html/);
+  assert.match(html, /Simulator/);
+  assert.match(app, /localStorage/);
+  assert.doesNotMatch(app, /blockchain|wallet|author lookup|followers/i);
+});

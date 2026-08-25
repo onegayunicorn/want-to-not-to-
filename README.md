@@ -123,3 +123,14 @@ node simulator/run-biometric.mjs
 ```
 
 The reference material also contains wealth, trading, NFT, wallet, and blockchain claims. Those are not treated as live financial functionality and are not connected to credentials, payments, exchanges, wallets, or real biometric authentication. The repository keeps the Learning Commons protocol and the biometric screen as deterministic demos with explicit security boundaries.
+
+
+## V1 launch boundary
+
+Learning Commons V1 is intentionally **sign-in-free, biometric-free, and blockchain-free**. The public path is: **open → write → private guide → optionally share → read the Commons**. There are no accounts, email or password flows, social logins, public profiles, followers, author lookup, wallet, or biometric identity features.
+
+The current public prototype stores notes in each visitor's browser through `localStorage`; it is suitable for UX testing but is not yet a shared multi-user Commons. The Express gateway and signed-note modules are development foundations for a later anonymous-ingestion stage and must not be described as production cryptography or a production datastore.
+
+The biometric console at `biometric.html` remains a separate simulator. It does not participate in the Learning Commons V1 identity model and does not access cameras, fingerprint hardware, biometric images, templates, or remote identity services.
+
+Before calling a hosted URL live, verify that it serves this repository's actual `index.html`, `app.js`, and `styles.css`, rather than a placeholder page. See [`docs/v1-launch-plan.md`](docs/v1-launch-plan.md) for the staged deployment plan and verification checklist. The wealth, trading, NFT, wallet, quantum, and blockchain snippets in supplied reference material were not integrated as live functionality.
